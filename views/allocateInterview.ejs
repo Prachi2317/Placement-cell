@@ -1,0 +1,52 @@
+<%- include('header')%>
+<title>Schedule Interview</title>
+</head>
+
+<body>
+  <%- include('navbar') %>
+
+  <form class="w-60 mx-auto mt-4" action="/company/schedule-interview" method="post"
+    style="height: 70vh;  align-items: center; background-color: pink;">
+    <h3 style="margin: 10px;">Interview Details</h3>
+
+    <div class="mb-3">
+      <label for="name" class="form-label" style="margin-left: 20px;">Name</label>
+      <select class="form-select" aria-label="Default select example" name="id" id="name">
+        <option selected disabled>Select Student</option>
+
+        <%for(let student of students){%>
+        <option value="<%=student.id%>"><%= student.name %></option>
+        <%}%>
+      </select></select>
+      </div>
+
+      <div class="mb-3">
+        <label for="company" class="form-label" style="margin-left: 20px;">Company</label>
+        <input
+          type="text"
+          class="form-control"
+          id="company"
+          name="company"
+          style="width: 200px; margin-left: 20px;"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="date" class="form-label" style="margin-left: 20px
+        ;">Date</label>
+        <input
+          type="date"
+          class="form-control"
+          id="date"
+          name="date"
+          style= "width: 200px; margin-left: 20px;"
+        />
+      </div>
+
+          <button class="btn btn-primary align-self-center" style="margin-left: 20px; background-color: purple;">
+            Schedule Interview
+          </button>
+    </form>
+
+  </body>
+</html>
