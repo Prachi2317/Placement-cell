@@ -15,6 +15,6 @@ An interface for the employees of a company to fill in the data into the databas
 Node.Js, MongoDB, Express, Passport, Fast-csv, ejs
 
 # SETUP
-
-1) Run command "npm start"
+1) Run command "npm install"
+2) Run command "npm start"
 
